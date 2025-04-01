@@ -1,0 +1,50 @@
+ip a: check ip 
+hostname -I : ip V4
+sudo -i : vào user root
+pwd : cho biết hiện tại đang ở đâu
+whoami : ai đang đăng nhập
+ls -a : hiển thị những thư mục ẩn
+mkdir -p : tạo nhiều thư mục cùng 1 lệnh
+echo "le hung" > title.txt
+cat title.txt
+tail -n +số : xem xong log
+tail -f : xem real time
+apt : cài đặt -y auto pass
+touch: tạo file
+
+-- cong cu chinh sua van ban VIM---
+apt install vim -y : cai vim
+vi : xem file chua co tao moi
+
+netstat -tlpun
+telnet + dia chi: kiem tra ket noi
+traceroute -T -p:
+
+apt install + ten tool 
+apt remove 
+ 
+---Phan Quyen---
+Tạo mới user : useradd và adduser
+su + ten user để chuyển
+xoá user : deluser + ten
+lệnh tạo group
+chown root : chỉ sửa chủ sở hữu và nhóm sở hữu
+
+chown -R root:
+
+rwx
+chmod g=rwx
+chmod u=rwx,g=rw,0=-
+
+-- phân quyền bằng số: r=4, w=2,x=1 => 4+2+1
+chmod 750 
+
+__Tu duy triển khai dự án__
+1. Công cụ là gì
+2. File cấu hình ở đâu
+3. Làm sao để build
+4. Run thế nào
+5. Thư mục làm việc riêng
+5. User Riêng
+
+
