@@ -1,0 +1,48 @@
+scp ten_du_an ten_server:/home/hungln = chuyen du an vao server
+
+Trien khai du an 
+1. moi du an co cong cu rieng
+2. chi can luu y file cau hinh
+3. trien khai chi can build va run
+
+chu y:
+1. moi du an se co 1 thu muc rieng
+2. moi du an se co 1 user rieng
+
+-- Trien Khai --
+tao thu muc : mkdir /projects
+di chuyen: mv todolist /projects/
+xem trang thai: ls -l /projects/
+
+adduser todolist
+chown -R todolist:todolist /projects/todolist/
+chmod -R 750 /projects/todolist/
+
+su todolist
+cd 
+ls
+
+Cach 1 : chay bang ngx
+apt install nginx -y
+mac dinh chay tren cong 80
+cd /etc/nginx/
+ls
+vi sites-available/default
+nginx -t
+
+systemctl restart nginx
+
+vi conf.d/todolist.conf
+server {
+        listen 8081;
+        root /projects/todolist/dist/;
+        index index.html;
+        try_files $uri @uri/ /index.html;
+}
+
+vi /etc/passwd : xem user
+vi /etc/nginx/nginx.conf
+
+usermod -aG todolist www-data
+
+nginx -s reload 
