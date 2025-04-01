@@ -46,3 +46,23 @@ vi /etc/nginx/nginx.conf
 usermod -aG todolist www-data
 
 nginx -s reload 
+
+-- Trien khai bang service --
+chay voi root o thu muc
+vi /lib/systemd/system/vision.service
+run: systemctl daemon-reload
+systemctl start vision
+systemctl status vision
+
+cach 3 : trien khai bang PM2
+
+
+
+
+cau lenh chay ngam luu log ben ngoai 
+nohup .... 2>&1 & 
+ps -ef 
+ps -ef| grep : timf kiem
+kill -9 id
+
+
